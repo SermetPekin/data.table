@@ -15,6 +15,24 @@ print.data.table = function(x, topn=getOption("datatable.print.topn"),
   # nrows - under this the whole (small) table is printed, unless topn is provided (100)
   # class - should column class be printed underneath column name? (FALSE)
   # trunc.cols - should only the columns be printed that can fit in the console? (FALSE)
+  
+  # Tibble-style printing option
+  if (isTRUE(getOption("datatable.print.tibble", FALSE))) {
+    if (requireNamespace("tibble", quietly = TRUE)) {
+      temp_tibble = tibble::as_tibble(x)
+      output = capture.output(print(temp_tibble))
+      # Replace "A tibble" with "A data.table" in the first line
+      if (length(output) > 0L && grepl("^# A tibble:", output[1L])) {
+        output[1L] = sub("# A tibble:", "# A data.table:", output[1L])
+      }
+      cat(output, sep = "\n")
+      rm(temp_tibble, output)
+      return(invisible(x))
+    } else {
+      warningf("tibble package is not installed. Falling back to standard data.table printing.")
+    }
+  }
+  
   if (!col.names %chin% c("auto", "top", "none"))
     stopf("Valid options for col.names are 'auto', 'top', and 'none'")
   if (length(trunc.cols) != 1L || !is.logical(trunc.cols) || is.na(trunc.cols))

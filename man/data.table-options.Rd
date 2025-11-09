@@ -35,6 +35,9 @@
    \item{\code{datatable.show.indices}}{A logical, default \code{TRUE}. A synonym for \code{datatable.print.keys} for historical reasons.}
    \item{\code{datatable.print.trunc.cols}}{A logical, default \code{FALSE}. If \code{TRUE} and a
      table has more columns than fit on the screen, it truncates the middle columns.}
+   \item{\code{datatable.print.tibble}}{A logical, default \code{FALSE}. If \code{TRUE}, data.tables
+     will be printed using tibble-style printing by temporarily converting to a tibble. Requires the 
+     \code{tibble} package to be installed.}
    \item{\code{datatable.prettyprint.char}}{An integer, default \code{100L}. The maximum number of
      characters to display in a character column cell before truncating.}
    \item{\code{datatable.print.colnames}}{A logical, default \code{TRUE}. If \code{TRUE}, prints column names.}

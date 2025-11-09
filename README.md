@@ -13,6 +13,8 @@
 [![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A )](http://numfocus.org)
 <!-- badges: end -->
 
+> **🎨 Tibble-Style Printing**: This fork includes an option for tibble-style printing. See [TIBBLE_STYLE_PRINT.md](./TIBBLE_STYLE_PRINT.md) for usage.
+
 `data.table` provides a high-performance version of [base R](https://www.r-project.org/about.html)'s `data.frame` with syntax and feature enhancements for ease of use, convenience and programming speed.
 
 [//]: # (numfocus-fiscal-sponsor-attribution)

@@ -83,6 +83,7 @@
     datatable.print.colnames='auto',    # for print.data.table
     datatable.print.keys=TRUE,          # for print.data.table
     datatable.print.trunc.cols=FALSE,   # for print.data.table
+    datatable.print.tibble=FALSE,       # for print.data.table - tibble-style printing
     datatable.show.indices=FALSE,       # for print.data.table
     datatable.allow.cartesian=FALSE,    # datatable.<argument name>
     datatable.join.many=TRUE,           # mergelist, [.data.table #4383 #914
