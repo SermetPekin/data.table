@@ -1,5 +1,12 @@
 # Tibble-Style Printing for data.table
 
+## Installation
+
+```r
+# Install from this fork
+remotes::install_github("SermetPekin/data.table")
+```
+
 ## Usage
 
 Enable tibble-style printing with a single option:
