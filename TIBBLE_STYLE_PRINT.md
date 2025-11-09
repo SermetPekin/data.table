@@ -3,7 +3,10 @@
 ## Installation
 
 ```r
-# Install from this fork
+# Using pak (faster)
+pak::pkg_install("SermetPekin/data.table")
+
+# Or using remotes
 remotes::install_github("SermetPekin/data.table")
 ```
 
