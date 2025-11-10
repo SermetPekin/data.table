@@ -19,7 +19,7 @@ print.data.table = function(x, topn=getOption("datatable.print.topn"),
   # Tibble-style printing option
   if (isTRUE(getOption("datatable.print.tibble", FALSE))) {
     if (requireNamespace("tibble", quietly = TRUE)) {
-      temp_tibble = tibble::as_tibble(x)
+      temp_tibble = tibble::as_tibble(x, .name_repair = "unique")
       output = capture.output(print(temp_tibble))
       # Replace "A tibble" with "A data.table" in the first line
       if (length(output) > 0L && grepl("^# A tibble:", output[1L])) {
